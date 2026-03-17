@@ -44,3 +44,26 @@ do
     else
         x = x * 3 + 1;
 } while (x != 1);
+
+while (x < 10)
+{
+    x++;
+}
+
+for (x = 0, y = 0; x < 20 && y < 20; x++, y++)
+{
+    if (x == y)
+        x = x + 1;
+}
+
+switch (x)
+{
+    case 1:
+        y = y + 1;
+        break;
+    case 2:
+        y = y + 2;
+        break;
+    default:
+        y = 0;
+}
