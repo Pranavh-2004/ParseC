@@ -5,9 +5,11 @@ A YACC/Bison parser to validate the syntax of a simplified subset of C. Programm
 ## Features
 
 - Variable declarations with basic types (`int`, `float`, `char`, `double`) and comma-separated declarators
-- `if`, `if-else`, and `do-while` control statements with nested block support
+- Variable declaration with initialization (for example: `int a = 5, b, c, d = 10;`)
+- Array declarations with multiple dimensions (for example: `int a[15];`, `int a[10][10];`, `int a[1][2][3][4];`, `int a[4][4], b[5];`)
+- `if`, `if-else`, `do-while`, `while`, `for`, and `switch` control statements with nested block support
 - Arithmetic expressions (`+`, `-`, `*`, `/`, `%`)
-- Relational expressions (`==`, `!=`, `<`, `>`, `<=`, `>=`)
+- Relational and logical expressions (`==`, `!=`, `<`, `>`, `<=`, `>=`, `&&`, `||`)
 - Comment handling (single-line `//` and multi-line `/* */`)
 - Line-accurate error reporting
 
