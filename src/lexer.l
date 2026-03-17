@@ -24,8 +24,13 @@ void update_token(void) {
 "double"    { update_token(); return DOUBLE; }
 "if"        { update_token(); return IF; }
 "else"      { update_token(); return ELSE; }
+"for"       { update_token(); return FOR; }
 "do"        { update_token(); return DO; }
 "while"     { update_token(); return WHILE; }
+"switch"    { update_token(); return SWITCH; }
+"case"      { update_token(); return CASE; }
+"default"   { update_token(); return DEFAULT; }
+"break"     { update_token(); return BREAK; }
 
     /* Identifiers */
 [a-zA-Z_][a-zA-Z0-9_]*  { update_token(); return ID; }
@@ -41,6 +46,10 @@ void update_token(void) {
 ">="    { update_token(); return GE; }
 "<"     { update_token(); return LT; }
 ">"     { update_token(); return GT; }
+"&&"    { update_token(); return AND; }
+"||"    { update_token(); return OR; }
+"++"    { update_token(); return INC; }
+"--"    { update_token(); return DEC; }
 
     /* Assignment */
 "="     { update_token(); return ASSIGN; }
@@ -55,10 +64,13 @@ void update_token(void) {
     /* Punctuators */
 ";"     { update_token(); return ';'; }
 ","     { update_token(); return ','; }
+":"     { update_token(); return ':'; }
 "("     { update_token(); return '('; }
 ")"     { update_token(); return ')'; }
 "{"     { update_token(); return '{'; }
 "}"     { update_token(); return '}'; }
+"["     { update_token(); return '['; }
+"]"     { update_token(); return ']'; }
 
     /* Single-line comments - skip */
 "//".*  { /* skip */ }
